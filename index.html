@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD' crossorigin='anonymous'>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Boss Monster</title>
+</head>
+
+<body>
+    <main class="container-fluid bg-dark text-light">
+
+        <section id="party" class="row">
+            <h1 class="col-6">Party</h1>
+            <h1 id="gold" class="col-6">Gold:0</h1>
+
+            <div id="Slate Slabrock" class="col-3">
+                <h2>Slate Slabrock</h2>
+                <div></div>
+                <h2 class="power">Damage: 5</h2>
+                <h2 class="hp">HP: 100</h2>
+                <div>
+                    <i class="mdi mdi-medical-bag fs-3 text-success btn" onclick="heal('Slate Slabrock')"></i>
+                    <i class="mdi mdi-arrow-up-bold fs-3 text-warning btn" onclick="heroLeveling('Slate Slabrock')"></i>
+                </div>
+            </div>
+
+            <div id="Flint Ironstag" class="col-3" onclick="heal('Flint Ironstag')">
+                <h2>Flint Ironstag</h2>
+                <div></div>
+                <h2 class="power">Damage: 10</h2>
+                <h2 class="hp">HP: 50</h2>
+                <div>
+                    <i class="mdi mdi-medical-bag fs-3 text-success btn" onclick="heal('Flint Ironstag')"></i>
+                    <i class="mdi mdi-arrow-up-bold fs-3 text-warning btn" onclick="heroLeveling('Flint Ironstag')"></i>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="row">
+            <div class="col-12 d-flex flex-column" onclick="attackBoss()">
+                <div class="bg-light">
+                    <div id="bossHP" class="bg-danger"></div>
+                </div>
+                <h1>Gooey Boy</h1>
+                <img src="metal_slime.png" alt="Slime">
+            </div>
+        </section>
+
+        <section class="row"></section>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
